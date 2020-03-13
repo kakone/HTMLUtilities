@@ -86,6 +86,9 @@ namespace Html
                                 outText.Write($"[{alt}]");
                             }
                             break;
+                        case "li":
+                            outText.Write("- ");
+                            break;
                     }
 
                     if (node.HasChildNodes)
@@ -100,6 +103,7 @@ namespace Html
                             case "p":
                             case "div":
                             case "tr":
+                            case "li":
                                 outText.WriteLine();
                                 break;
                             case "a":
